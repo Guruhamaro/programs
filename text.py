@@ -1,3 +1,3 @@
-import this
+print("hello world!")
 
 input()
