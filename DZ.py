@@ -1,1 +1,1 @@
-drtettetete
+# dz - ispravit text.py and ubrat mat :D
