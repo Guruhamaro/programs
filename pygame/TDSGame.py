@@ -30,6 +30,7 @@ y = 0
 
 moveRight = True
 
+pygame.key.set_repeat(1,0)
 while True:
 	backLay.fill(BLUE) #очистка экрана
 	foreLay.fill(CLEAR)
@@ -37,22 +38,18 @@ while True:
 	for e in pygame.event.get(): #get функция возващает события произошедшие за предыдущий кадр
 		if e.type == pygame.QUIT:
 			pygame.quit()
-
-
-	if x>400:
-		moveRight = False
-	elif x<0:
-		moveRight = True
-
-	if moveRight:
-		x+=1
-	else:
-		x-=1
+		if e.type == pygame.KEYDOWN:
+			if e.key == pygame.K_LEFT:
+				x-=1
+			if e.key == pygame.K_RIGHT:
+				x+=1
+			if e.key == pygame.K_UP:
+				y-=1
+			if e.key == pygame.K_DOWN:
+				y+=1
 	
-	foreLay.blit(square,[x,x])
 	
-
-
+	foreLay.blit(square,[x,y])
 
 	window.blit(backLay,[0,0]) 
 	window.blit(foreLay,[0,0])
