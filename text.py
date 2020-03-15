@@ -1,6 +1,8 @@
 print("hello world!")
 
-def fuck(int):
-	print("fuck "*int)
+def funk(int):
+	for i in range(int):
+		print("ыыыыыыы\n")
 
+funk(int(input("введи число раз вывод на экран\n")))
 input()
