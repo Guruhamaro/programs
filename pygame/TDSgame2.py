@@ -54,7 +54,7 @@ while True:
 				y1-=1
 			if e.key == pygame.K_DOWN:
 				y1+=1
-				
+
 	for e2 in pygame.event2.get(): #get функция возващает события произошедшие за предыдущий кадр
 		
 		if e2.type == pygame.KEYDOWN:
@@ -68,7 +68,9 @@ while True:
 				y2+=1
 	
 	
-	foreLay.blit(square,[x,y])
+	foreLay.blit(square1,[x1,y1])
+
+	foreLay.blit(square2,[x2,y2])
 
 	window.blit(backLay,[0,0]) 
 	window.blit(foreLay,[0,0])
